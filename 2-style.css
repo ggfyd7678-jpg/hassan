@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #f4eee3;
+    color: #3b2a20;
+}
+
+.top {
+    background: #35251d;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px #0002;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #e9b85b;
+}
+
+.player {
+    background: #ffffff18;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.container {
+    width: 92%;
+    max-width: 650px;
+    margin: 25px auto;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.welcome h1 {
+    font-size: 25px;
+    color: #493225;
+}
+
+.welcome p {
+    color: #8b7564;
+    font-size: 14px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.stat {
+    background: white;
+    padding: 13px 5px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 12px #49322512;
+}
+
+.stat span {
+    display: block;
+    font-size: 12px;
+    color: #8b7564;
+}
+
+.stat strong {
+    display: block;
+    font-size: 23px;
+    color: #9a6337;
+}
+
+.game-card {
+    background: white;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px #49322512;
+}
+
+.game-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-heading h2 {
+    font-size: 20px;
+}
+
+.game-heading p {
+    font-size: 12px;
+    color: #927e6d;
+}
+
+.level-badge {
+    background: #f7e8cc;
+    color: #8a552b;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.board {
+    width: 100%;
+    max-width: 390px;
+    aspect-ratio: 1;
+    margin: auto;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+    background: #eee4d5;
+    border: 2px solid #e0d0ba;
+    border-radius: 17px;
+}
+
+.arrow {
+    border: none;
+    border-radius: 10px;
+    background: #dfc7a7;
+    color: #69452d;
+    font-size: clamp(25px, 7vw, 43px);
+    font-weight: 900;
+    cursor: pointer;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow:hover {
+    background: #cba77b;
+    transform: scale(1.04);
+}
+
+.arrow.removed {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.arrow.blocked {
+    background: #f5d8d2;
+    color: #b84c3c;
+    animation: shake .25s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+.message {
+    text-align: center;
+    margin: 17px 0;
+    color: #81664f;
+    font-size: 14px;
+    min-height: 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    font-family: inherit;
+}
+
+.main-btn,
+.hint-btn,
+.ad-btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.main-btn {
+    flex: 1;
+    background: #493225;
+    color: white;
+}
+
+.hint-btn {
+    background: #f4e3c7;
+    color: #704a2b;
+}
+
+.reward-card,
+.competition {
+    margin-top: 18px;
+    background: white;
+    padding: 22px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #49322510;
+}
+
+.reward-card h2,
+.competition h2 {
+    font-size: 20px;
+}
+
+.reward-card p,
+.competition p {
+    color: #927e6d;
+    font-size: 13px;
+    margin: 5px 0 13px;
+}
+
+.ad-btn {
+    width: 100%;
+    background: #e9b85b;
+    color: #493225;
+    font-size: 15px;
+}
+
+.reward-card small {
+    display: block;
+    margin-top: 10px;
+    color: #9a8a7c;
+    font-size: 11px;
+}
+
+.cup {
+    font-size: 40px;
+}
+
+.progress {
+    height: 13px;
+    background: #eee4d5;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0 8px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #bd813e, #f0c66f);
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.competition h3 {
+    margin-top: 15px;
+    color: #6e482d;
+}
+
+.prize {
+    display: inline-block;
+    margin-top: 12px;
+    background: #f7e8cc;
+    color: #80542d;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 900;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 0;
+    color: #9b8978;
+    font-size: 12px;
+}
+
+@media (max-width: 450px) {
+    .container {
+        width: 94%;
+    }
+
+    .game-card {
+        padding: 13px;
+    }
+
+    .welcome h1 {
+        font-size: 21px;
+    }
+
+    .board {
+        gap: 5px;
+        padding: 8px;
+    }
+}

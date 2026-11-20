@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW CASH</title>
+    <link rel="stylesheet" href="2-style.css">
+</head>
+<body>
+
+    <header class="top">
+        <div class="logo">ARROW <span>CASH</span></div>
+        <div class="player">👤 اللاعب</div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h1>اختبر ذكاءك واربح النقاط!</h1>
+            <p>أخرج الأسهم بالترتيب الصحيح واجمع النقاط</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <span>⭐ نقاطك</span>
+                <strong id="points">0</strong>
+            </div>
+            <div class="stat">
+                <span>🎯 المرحلة</span>
+                <strong id="level">1</strong>
+            </div>
+            <div class="stat">
+                <span>❤️ المحاولات</span>
+                <strong id="lives">3</strong>
+            </div>
+        </section>
+
+        <section class="game-card">
+
+            <div class="game-heading">
+                <div>
+                    <h2>لعبة الأسهم</h2>
+                    <p>اضغط على السهم الذي يستطيع الخروج</p>
+                </div>
+                <div class="level-badge">LEVEL <span id="levelBadge">1</span></div>
+            </div>
+
+            <div id="board" class="board"></div>
+
+            <p id="message" class="message">
+                ابدأ اللعب وحاول إخراج كل الأسهم!
+            </p>
+
+            <div class="buttons">
+                <button id="newGame" class="main-btn">🔄 مرحلة جديدة</button>
+                <button id="hintBtn" class="hint-btn">💡 مساعدة</button>
+            </div>
+
+        </section>
+
+        <section class="reward-card">
+            <h2>🎁 اجمع نقاط إضافية</h2>
+            <p>شاهد إعلانًا واكسب 50 نقطة</p>
+            <button id="adBtn" class="ad-btn">▶ مشاهدة الإعلان +50</button>
+            <small>مكافأة الإعلان تحتاج إلى ربط شبكة إعلانات والتحقق من اكتماله.</small>
+        </section>
+
+        <section class="competition">
+            <div class="cup">🏆</div>
+            <h2>مسابقة ARROW CASH</h2>
+            <p>اجمع 10,000 نقطة وادخل المنافسة</p>
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+            <p id="progressText">0 من 10,000 نقطة</p>
+            <h3>أول 64 لاعبًا</h3>
+            <div class="prize">🎁 جوائز كبرى</div>
+        </section>
+
+        <footer>
+            <p>© 2026 ARROW CASH - جميع الحقوق محفوظة</p>
+        </footer>
+
+    </main>
+
+    <script src="3-script.js"></script>
+</body>
+</html>
